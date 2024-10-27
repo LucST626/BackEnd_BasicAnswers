@@ -1,6 +1,6 @@
 # BackEnd_BasicAnswers
 
-Envío de texto plano
+### Envío de texto plano
 
 Para enviar una cadena de texto plano desde el backend, puedes usar el método res.send(). Esto es útil cuando deseas devolver contenido simple como un mensaje de texto.
 Ejemplo:
@@ -13,7 +13,8 @@ app.get('/texto', (req, res) => {
 ```
 
 Luego, puedes acceder al texto navegando a la URL: http://localhost:3000/texto.
-Envío de objeto JSON
+
+### Envío de objeto JSON
 
 Para enviar datos en formato JSON, se utiliza el método res.json(). El navegador mostrará el JSON de forma cruda o formateada, dependiendo del navegador.
 Ejemplo:
@@ -26,7 +27,8 @@ app.get('/json', (req, res) => {
 ```
 
 Al navegar a http://localhost:3000/json, verás el contenido JSON directamente en el navegador.
-Envío de archivo
+
+### Envío de archivo
 
 Para enviar un archivo (como una imagen o documento), puedes usar res.sendFile(). Este método es útil para enviar cualquier tipo de archivo al cliente.
 Ejemplo:
@@ -41,7 +43,8 @@ app.get('/archivo', (req, res) => {
 ```
 
 Asegúrate de incluir el módulo path para manejar las rutas de archivos correctamente. Al acceder a http://localhost:3000/archivo, el navegador mostrará o descargará el archivo.
-Envío de estado específico
+
+### Envío de estado específico
 
 Para enviar una respuesta con un código de estado específico (como un error 404), usa el método res.status() junto con res.send(). Esto permite controlar qué mensaje se muestra según el estado.
 Ejemplo:
@@ -54,7 +57,8 @@ app.get('/error', (req, res) => {
 ```
 
 Al visitar http://localhost:3000/error, el navegador mostrará un mensaje con el estado 404, indicando que el recurso no fue encontrado.
-Redirección a otra URL
+
+### Redirección a otra URL
 
 Para redirigir a otra URL desde el servidor, puedes utilizar res.redirect(). Esto le indica al navegador que visite una nueva ruta automáticamente.
 Ejemplo:
@@ -72,7 +76,9 @@ app.get('/otra-ruta', (req, res) => {
 ```
 
 Al acceder a http://localhost:3000/redirigir, serás redirigido automáticamente a http://localhost:3000/otra-ruta.
-Envío de HTML
+
+
+### Envío de HTML
 
 Si deseas enviar código HTML para que el navegador lo renderice, simplemente usa res.send() con una cadena que contenga el HTML.
 Ejemplo:
