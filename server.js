@@ -7,12 +7,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Envío de texto plano
 app.get('/texto', (req, res) => {
-    res.send('Hola mundo, ejemplo ez!');
+    res.send('Hola mundo en texto plano');
 });
 
 // Envío de objeto JSON
 app.get('/json', (req, res) => {
-    res.json({ mensaje: 'Hola, mundo!' });
+    res.json({ mensaje: 'Hola, mundo dentro de un JSON' });
 });
 
 // Envío de archivo
@@ -22,7 +22,7 @@ app.get('/archivo', (req, res) => {
 
 // Envío de error con estado 404
 app.get('/error', (req, res) => {
-    res.status(404).send('No encontrado');
+    res.status(404).send('Hola mundo no encontrado');
 });
 
 // Redirección a otra ruta
@@ -31,7 +31,7 @@ app.get('/redirigir', (req, res) => {
 });
 
 app.get('/otra-ruta', (req, res) => {
-    res.send('Has sido redirigido a otro sitio jeje.');
+    res.send('Hola mundo troll');
 });
 
 // Envío de HTML
@@ -41,7 +41,7 @@ app.get('/html', (req, res) => {
 
 // Envío de cookies
 app.get('/cookie', (req, res) => {
-    res.cookie('nombre', 'usuario123').send('Cookie enviada');
+    res.cookie('nombre', 'Camacho').send('Cookie de camacho enviada');
 });
 
 // Envío de cabeceras personalizadas
