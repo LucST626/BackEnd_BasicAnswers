@@ -13,7 +13,7 @@ app.get('/json', (req, res) => {
 });
 
 app.get('/archivo', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'gatito.jpg')); 
+    res.sendFile(path.join(__dirname, 'public', 'lovers.jpeg')); 
 });
 
 app.get('/error', (req, res) => {
